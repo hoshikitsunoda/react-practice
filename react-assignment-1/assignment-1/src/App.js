@@ -12,6 +12,16 @@ class App extends Component {
     ]
   }
 
+  inputValueChangeHandler = (event) => {
+    this.setState({
+      users: [
+        { name: event.target.value },
+        { name: event.target.value },
+        { name: event.target.value }
+      ]
+    })
+  }
+
   render() {
     return (
       <div className="App">
