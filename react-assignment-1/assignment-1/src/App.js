@@ -25,10 +25,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <UserInput />
-        <UserOutput userName={this.state.users[0].name} />
-        <UserOutput userName={this.state.users[1].name} />
-        <UserOutput userName={this.state.users[2].name} />
+        <UserInput
+          changed={this.inputValueChangeHandler}/>
+        <UserOutput
+          userName={this.state.users[0].name} />
+        <UserOutput
+          userName={this.state.users[1].name} />
+        <UserOutput
+          userName={this.state.users[2].name} />
       </div>
     );
   }
