@@ -4,21 +4,11 @@ import UserInput from './UserInput/UserInput'
 import UserOutput from './UserOutput/UserOutput'
 
 class App extends Component {
-  state = {
-    users: [
-      { name: 'Hoshiki' },
-      { name: 'Ashley' },
-      { name: 'Shirugami' }
-    ]
-  }
+  state = { username: 'Hoshiki' }
 
   inputValueChangeHandler = (event) => {
     this.setState({
-      users: [
-        { name: event.target.value },
-        { name: event.target.value },
-        { name: event.target.value }
-      ]
+      username: event.target.value
     })
   }
 
@@ -26,13 +16,14 @@ class App extends Component {
     return (
       <div className="App">
         <UserInput
-          changed={this.inputValueChangeHandler}/>
+          value={this.state.username}
+          changed={this.inputValueChangeHandler} />
         <UserOutput
-          userName={this.state.users[0].name} />
+          userName={this.state.username} />
         <UserOutput
-          userName={this.state.users[1].name} />
+          userName={this.state.username} />
         <UserOutput
-          userName={this.state.users[2].name} />
+          userName="Hoshiki" />
       </div>
     );
   }
