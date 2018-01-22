@@ -4,7 +4,7 @@ const UserOutput = (props) => {
   return (
     <div>
       <p>User: {props.userName}</p>
-      <p>{props.children}</p>
+      <p>Helloooooo</p>
     </div>
   )
 }
