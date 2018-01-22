@@ -4,13 +4,21 @@ import UserInput from './UserInput/UserInput'
 import UserOutput from './UserOutput/UserOutput'
 
 class App extends Component {
+  state = {
+    users: [
+      { name: 'Hoshiki' },
+      { name: 'Ashley' },
+      { name: 'Shirugami' }
+    ]
+  }
+
   render() {
     return (
       <div className="App">
         <UserInput />
-        <UserOutput userName="Hosh"/>
-        <UserOutput userName="Ash"/>
-        <UserOutput userName="shiru"/>
+        <UserOutput userName={this.state.users[0].name} />
+        <UserOutput userName={this.state.users[1].name} />
+        <UserOutput userName={this.state.users[2].name} />
       </div>
     );
   }
