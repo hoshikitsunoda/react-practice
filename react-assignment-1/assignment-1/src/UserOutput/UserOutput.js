@@ -1,10 +1,10 @@
 import React from 'react'
 
-const UserOutput = () => {
+const UserOutput = (props) => {
   return (
     <div>
       <p>Hello</p>
-      <p>World</p>
+      <p>{props.children}</p>
     </div>
   )
 }

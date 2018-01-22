@@ -9,6 +9,8 @@ class App extends Component {
       <div className="App">
         <UserInput />
         <UserOutput />
+        <UserOutput> Yo mien </UserOutput>
+        <UserOutput> Wassup </UserOutput>
       </div>
     );
   }
