@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import ValidationComponent from './ValidationComponent/ValidationComponent'
 
 class App extends Component {
   state = {
@@ -18,6 +19,7 @@ class App extends Component {
           onChange={this.inputChangeHandler}
           value={this.state.input} />
         <p>{this.state.input.length}</p>
+        <ValidationComponent inputLength={this.state.input.length} />
       </div>
     );
   }
