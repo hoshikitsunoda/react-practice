@@ -4,15 +4,33 @@ import Persons from '../components/Persons/Persons'
 import Cockpit from '../components/Cockpit/Cockpit'
 
 class App extends Component {
-  state = {
-    persons: [
-      { id: 'wiwiw', name: 'Hosh', age: 33 },
-      { id: 'qiqiq', name: 'Ash', age: 31 },
-      { id: 'eieie', name: 'shiru', age: 2 }
-    ],
-    otherState: 'some other value',
-    showPersons: false
+  constructor(props) {
+    super(props)
+    console.log('[App.js] Inside Constructor', props);
+    this.state = {
+      persons: [
+        { id: 'wiwiw', name: 'Hosh', age: 33 },
+        { id: 'qiqiq', name: 'Ash', age: 31 },
+        { id: 'eieie', name: 'shiru', age: 2 }
+      ],
+      otherState: 'some other value',
+      showPersons: false
+    }
   }
+
+  componentWillMount() {
+    console.log('[App.js] Inside componentWillMount()');
+  }
+
+  // state = {
+  //   persons: [
+  //     { id: 'wiwiw', name: 'Hosh', age: 33 },
+  //     { id: 'qiqiq', name: 'Ash', age: 31 },
+  //     { id: 'eieie', name: 'shiru', age: 2 }
+  //   ],
+  //   otherState: 'some other value',
+  //   showPersons: false
+  // }
 
   deletePersonHandler = (personIndex) => {
     // const persons = this.state.persons.slice()
