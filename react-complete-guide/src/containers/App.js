@@ -7,30 +7,34 @@ class App extends Component {
   constructor(props) {
     super(props)
     console.log('[App.js] Inside Constructor', props);
-    this.state = {
-      persons: [
-        { id: 'wiwiw', name: 'Hosh', age: 33 },
-        { id: 'qiqiq', name: 'Ash', age: 31 },
-        { id: 'eieie', name: 'shiru', age: 2 }
-      ],
-      otherState: 'some other value',
-      showPersons: false
-    }
+    // this.state = {
+    //   persons: [
+    //     { id: 'wiwiw', name: 'Hosh', age: 33 },
+    //     { id: 'qiqiq', name: 'Ash', age: 31 },
+    //     { id: 'eieie', name: 'shiru', age: 2 }
+    //   ],
+    //   otherState: 'some other value',
+    //   showPersons: false
+    // }
   }
 
   componentWillMount() {
     console.log('[App.js] Inside componentWillMount()');
   }
 
-  // state = {
-  //   persons: [
-  //     { id: 'wiwiw', name: 'Hosh', age: 33 },
-  //     { id: 'qiqiq', name: 'Ash', age: 31 },
-  //     { id: 'eieie', name: 'shiru', age: 2 }
-  //   ],
-  //   otherState: 'some other value',
-  //   showPersons: false
-  // }
+  componentDidMount() {
+    console.log('[App.js] Inside componentDidMount()');
+  }
+
+  state = {
+    persons: [
+      { id: 'wiwiw', name: 'Hosh', age: 33 },
+      { id: 'qiqiq', name: 'Ash', age: 31 },
+      { id: 'eieie', name: 'shiru', age: 2 }
+    ],
+    otherState: 'some other value',
+    showPersons: false
+  }
 
   deletePersonHandler = (personIndex) => {
     // const persons = this.state.persons.slice()
@@ -64,6 +68,7 @@ class App extends Component {
   }
 
   render() {
+    console.log('[App.js] Inside render()');
     let persons = null
 
     if(this.state.showPersons) {
